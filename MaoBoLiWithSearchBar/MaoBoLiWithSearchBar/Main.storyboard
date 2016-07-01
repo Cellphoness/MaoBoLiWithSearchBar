@@ -30,7 +30,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="imageView" destination="VMC-90-qaa" id="W5o-Ph-ta6"/>
+                        <outlet property="imageView" destination="VMC-90-qaa" id="J03-bQ-cOA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
