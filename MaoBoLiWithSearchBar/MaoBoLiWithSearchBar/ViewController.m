@@ -97,8 +97,19 @@
         self.effectView.alpha = 0;
 //        self.searchBar.hidden = YES;
     }
+
     [self moveSearchBarToPoint:pt.y * 0.1];
     
+    //以动画的方式回去
+    CGPoint pp = self.searchBar.frame.origin;
+    if (pt.y < 0 && pp.y < 55) {
+        [UIView animateKeyframesWithDuration:1 delay:0 options:UIViewKeyframeAnimationOptionAllowUserInteraction animations:^{
+            self.searchBar.frame = CGRectMake(pp.x, -60, self.view.bounds.size.width, 28);
+            
+        } completion:^(BOOL finished) {
+            
+        }];
+    }
 }
 
 -(void)moveSearchBarToPoint:(CGFloat)valueYOffset
@@ -106,8 +117,8 @@
     CGPoint p = self.searchBar.frame.origin;
     CGPoint currP = CGPointMake(p.x, p.y + valueYOffset);
 
-    if (currP.y > 40) {
-        currP.y = 40;
+    if (currP.y > 60) {
+        currP.y = 60;
     }
     
     if (currP.y < -60) {
